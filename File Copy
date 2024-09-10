@@ -1,0 +1,19 @@
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+public class FileCopy {
+    public static void main(String[] args) {
+        String sourceFilePath = "source.txt";
+        String destinationFilePath = "destination.txt";
+        try (FileReader fileReader = new FileReader(sourceFilePath);
+             FileWriter fileWriter = new FileWriter(destinationFilePath)) {
+            int character;
+            while ((character = fileReader.read()) != -1) {
+                fileWriter.write(character);
+            }
+            System.out.println("File content copied successfully!");
+        } catch (IOException e) {
+            System.err.println("An error occurred: " + e.getMessage());
+        }
+    }
+}
