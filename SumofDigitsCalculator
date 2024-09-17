@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class SumOfDigitsCalculator {
     public static int sumOfDigits(int number) {
-        // Make sure to handle negative numbers by converting to positive
         number = Math.abs(number);
         int sum = 0;
         while (number > 0) {
