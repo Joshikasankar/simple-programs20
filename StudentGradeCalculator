@@ -9,7 +9,7 @@ public class StudentGradeCalculator {
         for (int i = 0; i < numSubjects; i++) {
             System.out.print("Enter marks for subject " + (i + 1) + ": ");
             marks[i] = scanner.nextInt();
-            total += marks[i];  // Add each mark to the total
+            total += marks[i]; 
         }
         double average = (double) total / numSubjects;
         char grade;
